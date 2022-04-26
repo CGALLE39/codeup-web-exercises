@@ -70,6 +70,11 @@
 
     console.log(isTwo(random))
 
+    function isOdd(number) {
+        return (number % 2 == 1)
+    }
+
+    console.log(isOdd(random))
     /**
      * TODO:
      * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -110,7 +115,7 @@
      *
      * Example:
      * > var originalPrice = 100;
-     * > var discountPercent = .2; // 20%
+     * > var discountPercent = .2; // 20%5
      * > applyDiscount(originalPrice, discountPercent) // 80
      *
      * > applyDiscount(45.99, 0.12) // 40.4712

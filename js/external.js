@@ -54,4 +54,4 @@ let premium = confirm("Are you a premium member?");
 console.log(premium);
 
 alert ("You get a discount!");
-
+if
