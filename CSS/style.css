@@ -1,4 +1,38 @@
     .fancy-header {
             color: purple;
             text-decoration: underline;
+            text-align: center;
            }
+    body {
+        background-image: url("img/reports-750x450.jpeg");
+        background-color: hotpink;
+        font-family: 'Tapestry', cursive;
+    }
+    ul {
+        list-style: square inside url("sqpurple.gif");
+    }
+    ol {
+        list-style: square inside url("sqpurple.gif");
+    }
+    ol {
+        background: yellow;
+        padding: 20px;
+    }
+
+    ul {
+        background: mediumpurple;
+        padding: 20px;
+    }
+
+    ol li {
+        background: lightyellow;
+        color: darkred;
+        padding: 5px;
+    }
+
+    ul li {
+        background: #cce5ff;
+        color: darkblue;
+        margin: 5px;
+    }
+
