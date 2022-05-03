@@ -69,4 +69,26 @@ table, th, td {
         color: darkblue;
         margin: 5px;
     }
-
+    .footer-link:hover {
+        background-color: hotpink;
+    }
+    .footer-link:visited {
+        color: red;
+    }
+    .footer-link {
+    background-color: green;
+    }
+    .footer-link {
+        background-color: black;
+        color: white;
+    }
+button {
+    color: black;
+    background-color: greenyellow;
+}
+.offers {
+    color: green;
+}
+td {
+    color: blue;
+}

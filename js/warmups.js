@@ -40,3 +40,23 @@ function alphaBet(str) {
     return str.split('').sort().join('');
 }
 console.log(alphaBet("watermelon"));
+
+
+function sumOfElements(arr) {
+    let totalSum = 0;
+   for (let i=0;i < arr.length; i++){
+       totalSum +=  arr[i];
+   }
+   return totalSum;
+}
+console.log(sumofElements([3,5,7,9,8]));
+
+// instructor solution
+
+// function sumofElements(arr) {
+//     let bucket = 0;
+//     for(let el or arr) {
+//         bucket += el;
+//     }
+//     return bucket;
+// }
