@@ -41,15 +41,15 @@ function alphaBet(str) {
 }
 console.log(alphaBet("watermelon"));
 
-
-function sumOfElements(arr) {
-    let totalSum = 0;
-   for (let i=0;i < arr.length; i++){
-       totalSum +=  arr[i];
-   }
-   return totalSum;
-}
-console.log(sumofElements([3,5,7,9,8]));
+//
+// function sumOfElements(arr) {
+//     let totalSum = 0;
+//    for (let i=0;i < arr.length; i++){
+//        totalSum +=  arr[i];
+//    }
+//    return totalSum;
+// }
+// console.log(sumofElements([3,5,7,9,8]));
 
 // instructor solution
 
@@ -60,3 +60,28 @@ console.log(sumofElements([3,5,7,9,8]));
 //     }
 //     return bucket;
 // }
+let product1 = {
+    name: 'Hammar',
+    priceInCents: 400,
+    description: 'It is a a hammar.',
+    inventory: 25034
+}
+
+let product2 = {
+    name: 'Computer',
+    priceInCents: 40000,
+    description: 'It is a computer.',
+    inventory: 33000
+}
+
+let product3 = {
+    name: 'Ruler',
+    priceInCents: 1000,
+    description: 'It is a ruler.',
+    inventory: 2200
+}
+function returnProductEssentialDetails(product) {
+    return {
+        name: product.priceInCents
+    }
+}
