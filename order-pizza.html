@@ -10,30 +10,45 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Pizza World</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Order Online</a>
+                    <a class="nav-link active" aria-current="page" href="#">Pizza World</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Menu</a>
+                    <a class="nav-link" href="#">Order Online</a>
                 </li>
-                <div class="input-group input-group-sm mb-3">
-                    <input type="text" placeholder="Zipcode" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-                </div>
-                <button type="button" class="btn btn-outline-primary">Find a store near you!</button>
+                <li class="nav-item">
+                <li class="nav-item">
+                    <a class="nav-link disabled">Menu</a>
+                </li>
+
             </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Zipcode" aria-label="Search">
+<!--                <button class="btn btn-outline-success" type="submit">Search Stores near you!</button>-->
+            </form>
+            <button class="btn btn-outline-primary" type="submit">Search Stores near you!</button>
         </div>
+<!--        <a class="navbar-brand" href="#">Pizza World</a>-->
+<!--        <a class="nav-link active" aria-current="page" href="#">Order Online</a>-->
+<!--        <a class="nav-link" href="#">Menu</a>-->
+<!--        <nav class="navbar navbar-light bg-light">-->
+<!--            <div class="container-fluid">-->
+<!--                <form class="d-flex">-->
+<!--                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--                    <button class="btn btn-outline-success" type="submit">Search</button>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </nav>-->
+<!--        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--            <span class="navbar-toggler-icon"></span>-->
+<!--        </button>-->
     </div>
 </nav>
 <!-- Jumbotron -->
 <div class="jumbotron" style="
     background-image: url('../img/pizza.png');
-    width: 100%;
     height: 346px;
   ">
     <h1 class="mb-3">Welcome to Pizza World uwu</h1>
@@ -98,7 +113,7 @@
                     <div class="card-header style=width: 100%;">Cheese and Sauce</div>
                     <ul class="list-group">
                         <li class="list-group-item list-group-item-dark">Cheese</li>
-                        <li class="list-group-item">uhhhh how much cheese u want?</li>
+                        <li class="list-group-item">How much cheese u want?</li>
                         <li class="list-group-item">
                             <select name="cheese-pref">
                         <option value="normal">Light</option>
@@ -149,6 +164,7 @@
                             <input name="pizza_crust" value="true" type="checkbox" checked> Small(10")</li>
                         <li class="list-group-item">
                             <input name="pizza_crust" value="true" type="checkbox" checked> Large(14")</li>
+
 
                     </ul>
                 </div>
