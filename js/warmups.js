@@ -170,18 +170,36 @@
         console.log(arryNum(array3));
         console.log(arryNum(array4));
 
-        function addToEndofArray(input){
+        function addToEndArray(input){
             array1.push(input);
         }
-        addToEndofArray('23');
+       addToEndArray('23');
 
 
-        function deleteLastofArray(){
+        function deleteLastArray(){
             array1.pop();
         }
-        deleteLastofArray()
 
 
+        //objects
+
+        const superNumber = {value:5, negPos:'positive', integer:true};
+        const superNumber2 = {value:-43, negPos:'negative', integer:false};
+
+        console.log(superNumber2);
+
+        function makeFavorite(obj) {
+            obj.favorite = true;
+            superNumber.favorite = true;
+        }
+        console.log(superNumber);
+        console.log(superNumber2);
+
+        //ppulling info from object//
+        function selectInfo(obj) {
+            return {value:obj, negPos:obj.negPos};
+        }
+        console.log(selectInfo(superNumber));
 
 
 }) ();
