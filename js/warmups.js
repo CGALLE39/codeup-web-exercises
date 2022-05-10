@@ -236,15 +236,39 @@ const hamsters = [
 ];
 
 function isTallest(arr) {
-    let tallest = {heightinMM: 0};
-    for (let hamster of arr) {
-        if (hamster.heightInMM > tallest.heightInMM) {
-            tallest = hamster;
+    let tallest = [0];
+    for (let i = 1; i < arr.length; i ++) {
+        if (arr[i].heightInMM > tallest.heightInMM) {
+            tallest = arr[i];
         }
     }
     return tallest;
 }
     console.log(isTallest(hamsters));
+
+
+function isColorful(hamsters) {
+    let color = {fur: []};
+    for (let hamster of hamsters) {
+        if (hamster.fur.length > color.fur.length){
+            color = hamster;
+        }
+    }
+    return color;
+}
+console.log(isColorful(hamsters))
+
+function mostisColorful(hamsters) {
+    let colors = hamsters[0];
+    for (let x = 1; x < hamsters.length; x++) {
+        if (hamsters[x].fur.length > colors.fur.length){
+            colors = hamsters[x];
+        }
+    }
+    return colors;
+}
+console.log(mostisColorful(hamsters))
+
 
 
 
