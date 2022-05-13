@@ -278,7 +278,7 @@ function makeObjectFromString(str) {
     if (lc.includes("r") || lc.includes("s")|| lc.includes("t") || lc.includes("l")|| lc.includes("n")||lc.includes("e")) {
         obj.containsLettersFromRSTLNE = true;
     } else {
-        obj.containsLettersFromRSTLNE = true;
+        obj.containsLettersFromRSTLNE = false;
     }
     return obj;
 }
