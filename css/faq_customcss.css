@@ -1,0 +1,41 @@
+
+.highlight {
+    background: yellow;
+
+}
+
+dl {
+    font-size: 15px;
+    /*text-align: center;*/
+}
+
+h1 {
+    /*text-align: center;*/
+}
+
+dd {
+    margin-bottom: 10px;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+img {
+    height: 200px;
+    width: 200px;
+    border: 10px;
+    margin: 0 5em;
+}
+
+.container {
+    display: flex;
+}
+
+.moreBtns {
+    display: flex;
+   justify-content: space-between;
+    border-color: black;
+
+}

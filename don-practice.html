@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Object Model</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .question {
+      padding: 10px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<h1>Lets practice DOM!</h1>
+
+<div class="question">
+  <h1>Question 0</h1>
+  <p>Lorem ipsum dolor sit amet.</p>
+</div>
+
+<div class="question">
+  <h1>Question 1</h1>
+  <input type="color" id="color">
+</div>
+
+<div class="question">
+  <h1>Question 2</h1>
+  <input type="text" id="todo">
+  <button type="button" name="todoBtn" id="addTodo">Add</button>
+  <ul id="todosList">
+  </ul>
+</div>
+
+
+<div class="question">
+  <h1>Question 3</h1>
+  <p>All these H1 Tags should be changing size!</p>
+  <button id="toggleH1">Toggle!</button>
+</div>
+
+<<<<<<< HEAD
+<div class="question" id="q4">
+=======
+<div class="question">
+>>>>>>> 0bf150ea4712b6ddfcacc34cc51e733989e25c30
+  <br>
+  <br>
+  <h1>Question 4</h1>
+  <br>
+  <br>
+</div>
+<div class="question">
+  <h1>Question 5</h1>
+  <button id="google">Google</button>
+</div>
+<div class="question">
+  <h1>Question 6</h1>
+  <label for="userInput">Enter String here: </label>
+  <input type="text" id="userInput" placeholder="Enter something to add!">
+  <button id="submitString">Add</button>
+  <p id="madLib">Hello</p>
+</div>
+<<<<<<< HEAD
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="js/jquery-3.x-git.js"></script>
+=======
+
+>>>>>>> 0bf150ea4712b6ddfcacc34cc51e733989e25c30
+<!--<div>-->
+<!--<input type="text" id="color">-->
+
+<!--<button id="changeColor">Change Color</button>-->
+<!--</div>-->
+<script>
+
+  // TODO: Prompt the user to enter a color. Select the first div with the class of "question", and change the font color to the users input.
+
+  let changeColor = prompt("Give me a color");
+const questionOne = document.getElementsByClassName("question")[0];
+questionOne.style.color = changeColor;
+
+
+document.getElementById("changeColor").addEventListener("click", function() {
+  let color = document.getElementById("color").value;
+  document.body.style.backgroundColor = color;
+});
+
+// const questionTwo = document.getElementsByClassName("question")[1];
+// questionTwo.
+// document.getElementById("addTodo").addEventListener("click",
+// function addToList() {
+//   let addList = document.getElementById('todosList');
+//   for (let i = 0; i < addList.length; i++) {
+//     console.log(addList[i].innerHTML);
+//   }
+//
+// });
+//
+// let btn1 = document.querySelector('#addTodo');
+// btn1.addEventListener('click', addToList);
+
+let todoInput = document.getElementById("todo");
+let todoList = document.getElementById("todosList");
+let todoBtn= document.getElementById("addTodo");
+
+todoBtn.addEventListener("click", function () {
+      if (todoInput.value !== "") {
+        let str = "<li>" + todoInput.value + "</li>";
+        todoList.innerHTML += str;
+        todoInput.value = "";
+      }
+<<<<<<< HEAD
+});
+=======
+})
+>>>>>>> 0bf150ea4712b6ddfcacc34cc51e733989e25c30
+
+/* For loop example
+ */
+
+  // let div1 = document.getElementsByClassName("question");
+  //
+  // for (let i = 0; i < div1.length; i ++) {
+  //   if (i === 0) {
+  //     div1[i].style.color = changeColor;
+  //   }
+  // }
+  //     DOM Practice Question #1
+  //     Create an HTML file called dom-practice.html in codeup-web-exercises repos.
+  // Put a text input on an html page with id of "color"
+  // Put a button on the page with id of "changeColor"
+  // The above is already done from your previous warm-up :)
+  // Use an Event listener to trigger when the button is clicked.
+  //         Use the value to change the background-color of the page to match the user's input value.
+  //         example of input: "#00000", "black", "#FF00FF"
+
+
+<<<<<<< HEAD
+  // Today’s warm-up
+  // DOM Practice Question #3
+
+  // Part 1:
+  // Every 1 seconds take the H1 tags and change the font size to 10px.
+  // If its already 10px set it to 20px;
+
+  // Part 2:
+  // Add a toggle button with id of "toggleH1"
+  // use that button to stop and restart the h1 tags from changing size.
+  //       (function() {
+  // let superTimer = 1;
+  // let interval = setInterval(
+  //         function updateTimer() {
+  //           if (superTimer == 0) {
+  //             $("h1").css({"font-size": "50px"});
+  //           } else if (superTimer > 0) {
+  //             document.getElementByClassName('h1').innerHTML = superTimer;
+  //           }
+  //         }, 1000)
+
+
+  //
+  //         var textuptimer = setInterval(textup, 1000);
+  //         function textup() {
+  //           $(".h1").css("font-size", "20px");
+  //         }
+  //
+  // function stopTimer() {
+  //   clearInterval(interval);
+  // }
+  // let toggleH1 = document.getElementsById('toggleH1');
+  // toggleH1.addEventListener('click', stopTimer);
+  //       })();
+
+
+//Vanilla JS for question 3
+  const toggleBtn = document.getElementById("h1");
+
+
+  function toggleFontSize() {
+    let h1s = document.getElementsByTagName("h1");
+    for (let h1 of h1s) {
+      if (h1.style.fontSize !== "10px") {
+        h1.style.fontSize = "10px";
+      } else {
+        h1.style.fontSize = "20px";
+      }
+    }
+  }
+
+  let h1IntervalValId = setInterval("click", function () {
+    if (h1IntervalValId === null) {
+      h1IntervalValId = setInterval(toggleFontSize, 1000);
+    } else {
+      clearInterval(h1IntervalValId);
+      h1IntervalValId = null;
+    }
+  });
+
+  //jquery method question 3
+  const toggleBtn =$("#toggleH1");
+  function toggleFontSize() {
+    let h1s = $("h1");
+    h1s.each(function () {
+      if ($(this).css("font-size") !== "10px") {
+        $(this).css("font-size", "10px");
+      } else {
+        $(this).css("font-size", "20px");
+      }
+    });
+  }
+
+  let intervalId = setInterval(toggleFontSize, 1000);
+
+  toggleBtn.click(function () {
+    if (intervalId === null) {
+      intervalId = setInterval(toggleFontSize, 1000)
+    } else {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+  })
+  // DOM Question #4
+
+  // When the mouse enters the content area of the 4th div with the class of "question", an alert should pop up
+  // that reads "CONGRATULATIONS ON YOUR NEW CRUISE!";
+
+  $('#q4').hover(function() {
+           $(this).html.alert("CONGRATULATIONS ON YOUR NEW CRUISE!");
+          });
+
+  $('h1').hover(function() {
+    $(this).css('color', 'pink');
+  });
+
+  document.getElementsByClassName("question")[4].addEventListener("mouseenter, function() {
+          alert("CONGRATULATIONS");
+});
+
+$(".question").first().next().next().next().next().mouseenter(function () {
+  alert("Congratulations on your new cruise");
+});
+=======
+
+
+
+
+>>>>>>> 0bf150ea4712b6ddfcacc34cc51e733989e25c30
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id='map' style='width: 95vw; height: 75vh; margin: auto'></div>
+    <div>
+        <input type="address" id="address" name="address" class="form-control" placeholder="Enter Address">
+        <button type='submit' class="btn1" id="btn">Enter</button>
+    </div>
+<script src="js/keys.js"></script>
+<script src="js/geocode-utils.js"></script>
+<script>
+
+    const myRestaurants = [
+        {
+            restaurant: "Chicago's Pizza",
+            location: [-98.50745, 29.50445],
+            description: "The BEST deep dish pizza in all of San Antonio is found here"
+        }, {
+            restaurant: "Hero's Ramen and Sushi",
+            location: [-98.48917, 29.56469],
+            description: "The BEST ramen in San Antonio is eaten here."
+        }, {
+            restaurant: "Artea",
+            location: [-98.699137, 29.50586],
+            description: "The BEST boba tea is HERE"
+        }];
+    console.log(myRestaurants);
+
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    const MAP = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4946, 29.4252], // starting position [lng, lat]
+        zoom: 10// starting zoom
+    });
+
+
+
+    myRestaurants.forEach(function(restaurants) {
+        let MARKER = new mapboxgl.Marker()
+            .setLngLat(restaurants.location)
+            .addTo(MAP)
+    })
+console.log(MAP);
+
+    myRestaurants.forEach(function(restaurants) {
+        console.log(info)
+        let POPUP = new mapboxgl.Popup()
+            .setLngLat(info)
+            .setHTML(restaurants.description)
+        marker.setPopup(POPUP)
+    })
+
+    function getDirectionsHere(lat,lng) {
+
+        map.setMinZoom(10);
+        map.setZoom(10);
+
+    }
+
+
+    let btn = document.querySelector('#btn1');
+
+    btn.addEventListener('click', info)
+    geocode(document.getElementById("address"), MAPBOX_API_KEY).then(function (info) {
+        console.log(info)
+        const NEW_MARKER = new mapboxgl.Marker()
+            .setLngLat(info)
+            .addTo(MAP);
+    })
+
+
+
+</script>
+</body>
+</html>
