@@ -57,16 +57,14 @@ users.forEach(function(user) {
   return emails.push(user.email);
 });
 
-function user(emails) {
-  this.emails = emails;
-}
-
+users.forEach(emails => console.log(emails));
 
 
 users.forEach(function(user) {
   return names.push(user.name);
 });
 
+users.forEach(names => console.log(names));
 
 
 // TODO: replace `var` with `let` in the following declaration
@@ -78,6 +76,8 @@ users.forEach(function(user) {
   const name = user.name;
   const email = user.email;
   const languages = user.languages;
+
+
 
 
 
