@@ -1,0 +1,5 @@
+const MAPBOX_API_KEY = "pk.eyJ1IjoiY2dhbGxlMzkiLCJhIjoiY2wzbHk5ZjVmMDEyeTNqbGs4eDZiNTR2ayJ9.qkw2RsjemG1tgod8pr9Q8A";
+
+const OPEN_WEATHER_KEY = "04c038b309a20bd6b810fcc58411be70";
+
+const PROMISE_KEY = "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";

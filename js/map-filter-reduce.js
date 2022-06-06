@@ -65,6 +65,9 @@ users.forEach(user => {
 
 console.log(total);
 
+const sumYears = users.reduce((a, b) => a.yearsOfExperience + b.yearsOfExperience, 0);
+console.log(sumYears);
+
 //5. Use .reduce to get the longest email from the list of users.
 
 var longest = users.reduce(function (a, b) { return a.email.length > b.email.length ? a : b; }).email;
