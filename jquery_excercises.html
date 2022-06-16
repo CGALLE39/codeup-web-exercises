@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Curriculum Code Sample</title>
+</head>
+<body>
+<div>
+<img class="vocaloid" id="allVocaloid" src = img/images.jpeg>
+    <img class="rinlen" id="rinandlen" src = img/Kagamine_act2.webp>
+</div>
+<div>
+    <h1 class="codeup" id="silly-text"> Welcome to The World of Vocaloid </h1>
+</div>
+<p class="random" id="randomtxt"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet at blanditiis earum enim error fugiat, in laboriosam, laborum magnam magni obcaecati odit officia perspiciatis quas quo rem sit temporibus voluptates.</p>
+
+<div>
+    <ul class="codeup" id="goodList">
+        <li><h3>Vocaloid Tier List</h3></li>
+        <li>Miku Hatsune</li>
+        <li>Luka Megurine</li>
+        <li>Rin & Len Kagamine</li>
+        <li>Gumi</li>
+    </ul>
+</div>
+
+<div>
+    <img class="miku" id="superMiku" src = img/87DC52B0-C35E-45AB-8E9F-CD956BA182CE_4_5005_c.jpeg>
+</div>
+
+<div class="codeup" id="bestpopstar">
+<h5 class="codeup" id="bestpopstar"><p>Although she is not the first ever created vocaloid, Miku is THE superior vocaloid.</p></h5>
+</div>
+
+<!-- INSERT HTML CODE SAMPLE HERE -->
+
+<script type="text/javascript" src="js/jquery-3.x-git.js"></script>
+<!--<script type="text/javascript" src="js/my-custom-javascript.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script>
+    // $(document).ready(function() {
+    // alert( 'The DOM has finished loading!' );
+    // });
+
+    // var contents = $('#silly-text').html();
+    // alert(contents);
+
+    $("#superMiku").css({"border": "4px hotpink solid", "margin" : "20px"});
+
+    $("li").css("color", "blue");
+
+    $("li").css('font-size', '10px');
+
+    $("p").css("background", "pink");
+
+    $("ul").css("background", "yellow");
+
+    $("li:nth-child(1)").css("color", "purple");
+
+    $("#silly-text").css("color", "green");
+
+    $("#bestpopstar").css("font-size", '10px');
+
+    $("#bestpopstar").css({"border": "2px yellow dotted"});
+
+    // $("body").css("background", "black");
+
+    $("codeup").css({"border": "1px red"});
+
+    $('#allVocaloid').css({"border": "4px hotpink solid", "margin" : "20px"});
+
+    $("#silly-text").css({"text-align": "center"});
+
+    $("#bestpopstar").css({"text-align": "center"});
+
+    $("ul").css({"text-align": "center"});
+    $("ul").css({"list-style": "none"});
+
+
+    // $("h1, p, li").css("background", "blue");
+
+
+    // function vocaClick() {}
+    // var handler = function() {}
+
+    document.body.style.backgroundImage = "url('img/thecoolestbg.webp')";
+
+
+    $('#rinandlen').css({
+        width: '150px',
+        height: '200px'
+    });
+
+    // $('#allVocaloid').css({
+    //     width: '500px'
+    // })
+    // $('#rinandlen').css({"float"})
+
+    $('#silly-text').click(
+        function() {
+            $(this).css('background-color', 'hotpink');
+        }
+    );
+    $()
+
+
+    $('p, li').dblclick(
+        function() {
+            $(this).css('font-size', '20px');
+        }
+    );
+    $()
+
+    $('li').hover(
+        function() {
+            $(this).css('color', 'red');
+        } ,
+        function() {
+            $(this).css('color', 'blue');
+        }
+    );
+
+    $(document).ready(function(){
+        $("#allVocaloid img").centerImage();
+    });
+    // $(function() {
+    //     $('.vocaloid').css({
+            // 'position' : 'center',
+            // 'left' : '60%',
+            // 'top' : '75%',
+            // 'margin-left' : -$('.vocaloid').width()/2,
+            // 'margin-top' : -$('.vocaloid').height()/2
+    //     });
+    // });
+
+
+
+    $('#randomtxt').hover(function() {
+            $(this).html('Oop, gotchu');
+        });
+</script>
+
+</body>
+</html>

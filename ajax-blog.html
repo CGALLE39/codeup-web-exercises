@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">yay</button>
+<div class="card" style="width: 18rem;">
+    <img src="img/jirachi.webp" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+    <li id="insertBlog">
+
+
+    </li>
+    </ul>
+</div>
+
+<button id="btn2">yaya</button>
+<div class="card" style="width: 18rem;">
+    <img src="img/jirachi.webp" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li id="insertBlog2">
+
+
+        </li>
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    (function() {
+        "use strict";
+        // TODO: Create an AJAX GET request for the file under data/inventory.json
+
+        // var ourRequest = new XMLHttpRequest();
+        // ourRequest.open('GET', 'data/inventory.json');
+        // ourRequest.onload = function() {
+        //   var ourData = JSON.parse(ourRequest.responseText);
+        //   console.log(ourData[0]);
+        // };
+        // ourRequest.send();
+
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+        var productContainer = document.getElementById("insertBlog");
+        var btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function() {
+            var ourRequest = new XMLHttpRequest();
+            ourRequest.open('GET', 'data/blog.json');
+            ourRequest.onload = function() {
+                var ourData = JSON.parse(ourRequest.responseText);
+                renderHTML(ourData);
+            };
+            ourRequest.send();
+        });
+
+        ///////////////////////////////////
+
+        function renderHTML(data) {
+            var htmlString = "";
+
+            for (let i = 0; i < data.length; i ++) {
+                htmlString += "<p>" + data[i].title + data[i].quantity + data[i].categories + "</p>"
+            };
+/////////////////////////////////////////////////
+
+            $.get("data/blog.json").done(function (bloggy) {
+                $("#insertBlog").html("");
+                bloggy.forEach(function(bloggy) {
+                    var ttl = "<ul>" + "<li>" + bloggy.title
+                    var cont = "<li>" + bloggy.content + "</li>";
+                    var cat = "<li>" + bloggy.categories + "</li>" + "</ul>";
+                    $("#insertBlog").append(ttl + cont + cat);
+                });
+            });
+        }
+
+
+        //////////////////
+        var productContainer = document.getElementById("insertBlog2");
+        var btn = document.getElementById("btn2");
+
+        btn.addEventListener("click", function() {
+            var ourRequest = new XMLHttpRequest();
+            ourRequest.open('GET', 'data/blog.json');
+            ourRequest.onload = function() {
+                var ourData = JSON.parse(ourRequest.responseText);
+                renderHTML(ourData);
+            };
+            ourRequest.send();
+        });
+
+        $.get("data/blog.json").done(function (bloggy) {
+            $("#insertBlog2").html("");
+            bloggy.forEach(function(bloggy) {
+                var ttl = "<ul>" + "<li>" + bloggy.title
+                var cont = "<li>" + bloggy.content + "</li>";
+                var cat = "<li>" + bloggy.categories + "</li>" + "</ul>";
+                $("#insertBlog2").append(ttl + cont + cat);
+            });
+        });
+
+
+
+
+
+
+
+    })();
+</script>
+</body>
+</html>
