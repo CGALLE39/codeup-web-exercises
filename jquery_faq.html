@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/faq_customcss.css">
+
+</head>
+<body>
+<h1 class="parkhead"> Random National Park Facts</h1>
+
+<button class="togglie" id="btn1">Toggle</button>
+<dl>
+    <dt class="visible">Fact 1</dt>
+        <dd class="invisible">The Grand Canyon, in Grand Canyon National Park in Arizona, is known as one of the Seven Natural Wonders of the World.</dd>
+
+    <dt class="visible">Fact 2</dt>
+        <dd class="invisible">National parks are home to life on a big scale: Sequoia trees are some of the world's largest living things, and Alaskan brown bears are some of the world's largest carnivores.</dd>
+
+    <dt class="visible">Fact 3</dt>
+        <dd class="invisible">The smallest national park is Hot Springs National Park in Arkansas, coming in at about 5,500 acres. This was actually the first federally protected piece of land in 1832. It was not named a national park until 1921. </dd>
+
+    <dt class="visible">Fact 4</dt>
+         <dd class="invisible">Great Smoky Mountains National Park is the most visited national park with more than 9 million guests per year, followed by Grand Canyon National Park, which gets more than 4 million visits per year.</dd>
+
+    <dt class="visible">Fact 5</dt>
+         <dd class="invisible">Mount McKinley in the Alaska Range of Denali National Park is the highest point in the national parks at 20,302 feet.</dd>
+
+    <dt class="visible">Fact 6</dt>
+         <dd class="invisible">Additionally, Denali National Park has the widest range of elevations, from 200 feet in Yentna River to 20,302 feet at the summit of Mount McKinley.</dd>
+
+    <dt class="visible">Fact 7</dt>
+         <dd class="invisible">The parks are also home to the lowest point in the western hemisphere: Badwater Basin in Death Valley, California, is 282 feet below sea level.</dd>
+
+    <dt class="visible">Fact 8</dt>
+        <dd class="invisible">California and Alaska each have eight national parks.</dd>
+
+    <dt class="visible">Fact 9</dt>
+        <dd class="invisible">The Colorado River and the Green River flow through Utah’s national parks, offering some of the best whitewater rafting anywhere in the country.</dd>
+
+    <dt class="visible">Fact 10</dt>
+        <dd class="invisible">Alaska is home to one of the least visited national parks: Kobuk Valley National Park receives just 3,000 visitors per year.</dd>
+</dl>
+
+<button class="funbtn" id="btn2">click me owo</button>
+
+<div>
+    <h3> List 1 </h3>
+<ul class ="lists">
+    <li class = "item1">ahhhh</li>
+    <li class = "item2">ahhhh</li>
+    <li class = "item3">ahhhh</li>
+    <li class = "item4">ahhhh</li>
+</ul>
+</div>
+
+<div>
+    <h3> List 2 </h3>
+    <ul class ="lists">
+        <li class = "item1">ahhhh</li>
+        <li class = "item2">ahhhh</li>
+        <li class = "item3">ahhhh</li>
+        <li class = "item4">ahhhh</li>
+    </ul>
+</div>
+
+<div>
+    <h3> List 3 </h3>
+    <ul class ="lists">
+        <li class = "item1">ahhhh</li>
+        <li class = "item2">ahhhh</li>
+        <li class = "item3">ahhhh</li>
+        <li class = "item4">ahhhh</li>
+    </ul>
+</div>
+
+<div class="container">
+
+<div class="pic1" id="img1">
+    <img src="img/oldmanmiku.jpeg"> </div>
+
+
+<div class="pic2" id="img2">
+    <img src="img/leekmiku.png"> </div>
+
+<div class="pic3" id="img3">
+    <img src="img/cringedmiku.webp"> </div>
+
+</div>
+
+<div class="moreBtns">
+    <button class="picbtn1" id="swap1">swap</button>
+    <button class="picbtn2" id="swap2">swap</button>
+    <button class="picbtn3" id="swap3">swap</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="js/jquery-3.x-git.js"></script>
+<script>
+    "use strict";
+
+
+    // $(".invisible").css({"visibility": "hidden;"});
+    //let h1Html = $('.invisible").html();
+    // console.log(h1Html);
+
+
+    $("body").css({"background-color" : "powderblue"});
+
+    $(".visible").click(function() {
+        $( this ).toggleClass( "highlight" );
+    });
+    $(".invisible").click(function() {
+        $( this ).toggleClass( "highlight" );
+    });
+
+
+    $(function() {
+        $("#btn1").click(function () {
+            $("dd").toggleClass("invisible");
+        });
+    });
+
+    $("h1").each(function () {
+        if ($(this).is("#id")) {
+            console.log("skip")
+        } else {
+            $(this).addClass("class");
+        }
+    });
+
+    $("main li").each(function (index, element) {
+        if (index % 2 === 0) {
+            $(element).css("background", "rgba(113, 191, 149, .4)");
+        }
+    });
+
+    // $("li").last().css("background", "yellow");
+    $(function() {
+        $("#btn2").click(function () {
+            $("dd").toggleClass("item4");
+        });
+    });
+
+    // $("li.item4").css("background", "yellow");
+
+    $("#btn2").click(function() {
+        if ($(this).css("background-color") !== "rgba(0, 0, 0, 0)") {
+            $(this).css("background-color", "rgba(0, 0, 0, 0)");
+        } else {
+            $("li.item4").css("background", "yellow");
+        }
+    });
+
+
+    $('h3').click(
+        function() {
+            $("li").css('font-weight', 'bold');
+        }
+    );
+    $()
+
+    $('li').click(
+        function() {
+            $("li.item1").css('color', 'blue');
+        }
+    );
+    $()
+
+
+
+</script>
+</body>
+</html>

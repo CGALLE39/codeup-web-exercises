@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
-<script src="js/geocode-utils.js"></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <script src="https://kit.fontawesome.com/a2ab8c6ab6.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Abel&family=Press+Start+2P&family=Tapestry&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/weather_map.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/a2ab8c6ab6.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Press+Start+2P&family=Tapestry&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/weather_map.css">
 
 </head>
 <body>
@@ -22,103 +21,106 @@
 
 
 
-<center>
+
 <div>
-  <nav class="navberry navbar mb-3">
-    <div class="container-fluid">
-      <p class="welomer navbar-brand" id = "welcomer">Weather Map</p>
-    </div>
-  </nav>
+    <nav class="navberry navbar mb-3">
+        <div class="container-fluid">
+            <p class="welomer navbar-brand" id = "welcomer">Weather Map</p>
+        </div>
+    </nav>
 </div>
 
 <form class="navbarrr d-flex w-40" role="search">
-  <div class = "toppic d-flex">
-  </div>
-  <input class="form-control me-2" id="place" type="search" placeholder="Search" aria-label="Search">
-  <button id="submitData">Search</button>
-  <h2 id="cityName"> </h2>
+    <div class = "toppic d-flex">
+    </div>
+    <input class="form-control me-2" type="text" name="city" id ="city" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success" id = 'btn1' type="submit">Enter a City</button>
+    <span id ="error"> </span>
 </form>
 
-
-<h1 class= "forecastlabel mt-2" id="forecast"> 5 Day Weather Forecast </h1>
-<div class="m-auto">
-  <div class="container px-4 mt-3">
-    <div class="cardholder row">
-      <div class="card col-md-2">
-        <div class="card-body">
-          <h5 class="Date" id="date">Card title</h5>
-<!--          <div class="image"></div><img src="..." class="card-img-top" alt="...">-->
-          <p class="description" id="description">description</p>
-          <p class="temp" id="Temp">temp</p>
-          <p class="humid" id="hum">humidity</p>
-          <p class="pressure" id="press">pressure</p>
-        </div>
-      </div>
-      <div class="card col-md-2">
-        <div class="card-body">
-          <h5 class="Date" id="date">Card title</h5>
-<!--          <div class="image"></div><img src="..." class="card-img-top" alt="...">-->
-          <p class="description" id="description">description</p>
-          <p class="temp" id="Temp">temp</p>
-          <p class="humid" id="hum">humidity</p>
-          <p class="pressure" id="press">pressure</p>
-        </div>
-      </div>
-      <div class="card col-md-2">
-        <div class="card-body">
-          <h5 class="Date" id="date">Card title</h5>
-<!--          <div class="image"></div><img src="..." class="card-img-top" alt="...">-->
-          <p class="description" id="description">description</p>
-          <p class="temp" id="Temp">temp</p>
-          <p class="humid" id="hum">humidity</p>
-          <p class="pressure" id="press">pressure</p>
-        </div>
-      </div>
-      <div class="card col-md-2">
-        <div class="card-body">
-          <h5 class="Date" id="date">Card title</h5>
-<!--          <div class="image"></div><img src="..." class="card-img-top" alt="...">-->
-          <p class="description" id="description">description</p>
-          <p class="temp" id="Temp">temp</p>
-          <p class="humid" id="hum">humidity</p>
-          <p class="pressure" id="press">pressure</p>
-        </div>
-      </div>
-      <div class="card col-md-2">
-        <div class="card-body">
-          <h5 class="Date" id="date">Card title</h5>
-<!--          <div class="image"></div><img src="..." class="card-img-top" alt="...">-->
-          <p class="description" id="description">description</p>
-          <p class="temp" id="Temp">temp</p>
-          <p class="humid" id="hum">humidity</p>
-          <p class="pressure" id="press">pressure</p>
-        </div>
-      </div>
+<div class="card">
+    <div class="search">
+        <input type="text" class="search-bar" placeholder="Search">
+        <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
+                     width="1.5em" xmlns="http://www.w3.org/2000/svg">
     </div>
-  </div>
+    <div class="weather loading">
+        <h2 class="city"></h2>
+        <h1 class="temp"></h1>
+        <div class="flex">
+<!--            <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />-->
+            <div class="description"></div>
+        </div>
+        <div class="humidity"></div>
+        <div class="wind"></div>
+    </div>
 </div>
-</center>
+
+
+
+<!--//cards-->
+<!--<div class="m-auto">-->
+<!--    <div class="container px-4 mt-3">-->
+<!--        <div class="cardholder row">-->
+<!--            <div class="card col-md-2">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Today</h5>-->
+<!--                    &lt;!&ndash;                <img src="..." class="card-img-top" alt="...">&ndash;&gt;-->
+<!--                    <p class="card1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card col-md-2">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Tomorrow</h5>-->
+<!--                    &lt;!&ndash;                <img src="..." class="card-img-top" alt="...">&ndash;&gt;-->
+<!--                    <p class="card2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card col-md-2">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Card title</h5>-->
+<!--                    &lt;!&ndash;                <img src="..." class="card-img-top" alt="...">&ndash;&gt;-->
+<!--                    <p class="card3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card col-md-2">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Card title</h5>-->
+<!--                    &lt;!&ndash;                <img src="..." class="card-img-top" alt="...">&ndash;&gt;-->
+<!--                    <p class="card4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="card col-md-2">-->
+<!--                <div class="card-body">-->
+<!--                    <h5 class="card-title">Card title</h5>-->
+<!--                    &lt;!&ndash;                <img src="..." class="card-img-top" alt="...">&ndash;&gt;-->
+<!--                    <p class="card5">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
 
 <div id='map' style='width: 75vw; height: 55vh; margin: auto'></div>
 
 
-
 <footer class="footer row col-12 justify-content-center align-items-center ">
-  <div class="col-12 d-flex p-1 justify-content-center">
-    <div class="me-2"><i class="fa-brands fa-instagram"></i></div>
-    <div class="me-2"><i class="fa-brands fa-facebook"></i></div>
-    <div class="me-2"><i class="fa-brands fa-twitter"></i></div>
-    <div class="me-2"><i class="fa-brands fa-discord"></i></div>
+    <div class="col-12 d-flex p-1 justify-content-center">
+        <div class="me-2"><i class="fa-brands fa-instagram"></i></div>
+        <div class="me-2"><i class="fa-brands fa-facebook"></i></div>
+        <div class="me-2"><i class="fa-brands fa-twitter"></i></div>
+        <div class="me-2"><i class="fa-brands fa-discord"></i></div>
 
 
-  </div>
-  <div class="col-12 row p-0 text-center justify-content-center">
-    <p class="col-2 m-0">About</p>
-    <p class="col-1 m-0">|</p>
-    <p class="col-2 m-0">Contact Us</p>
-    <p class="col-1 m-0">|</p>
-    <p class="col-2 m-0">News</p>
-  </div>
+    </div>
+    <div class="col-12 row p-0 text-center justify-content-center">
+        <p class="col-2 m-0">About</p>
+        <p class="col-1 m-0">|</p>
+        <p class="col-2 m-0">Contact Us</p>
+        <p class="col-1 m-0">|</p>
+        <p class="col-2 m-0">News</p>
+    </div>
 
 </footer>
 
@@ -128,48 +130,64 @@
 <script src ="js/open-weather.js"></script>
 
 <script>
-  $(document).ready(function () {
-  "use strict";
-
-    let btn = document.querySelector('#submitData');
-    btn.addEventListener('click', result)
-    geocode(document.getElementById("place"), MAPBOX_API_KEY).then(function (result){
-      console.log(result)
-      const NEW_MARKER = new mapboxgl.Marker()
-              .setLngLat(result)
-              .addTo(MAP);
-      map.setCenter(result)
-      map.setZoom(12);
-      $("#cityName").html("")
-
+    "use strict";
+    mapboxgl.accessToken = MAPBOX_API_KEY;
+    const MAP = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-98.4946, 29.4252], // starting position [lng, lat]
+        zoom: 9 // starting zoom
     });
-  });
-  });
-
-  //// Nicolas Cage Konami code /////////////////////////////////////////
+    //// Nicolas Cage Konami code /////////////////////////////////////////
 
 
-  $(document).keyup(function(event){
-    console.log(event.keyCode);
-  });
-  function konami(fn) {
-    var input = "";
-    var cheatcode = "3838404037393739666513";
-    $(document).keydown(function(e) {
-      input += e.keyCode;
-      if (input.indexOf(cheatcode) !== -1) {
-        fn();
-        input = "";
-      }
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
     });
-  }
-  $(document).ready(function() {
-    konami(function() {
-      alert("loading your good morning from Nicolas Cage");
-      $('body').append('<img src="img/nicolassunshine.gif"/>');
+    function konami(fn) {
+        var input = "";
+        var cheatcode = "3838404037393739666513";
+        $(document).keydown(function(e) {
+            input += e.keyCode;
+            if (input.indexOf(cheatcode) !== -1) {
+                fn();
+                input = "";
+            }
+        });
+    }
+    $(document).ready(function() {
+        konami(function() {
+            alert("loading your good morning from Nicolas Cage");
+            $('body').append('<img src="img/nicolassunshine.gif"/>');
+        });
     });
-  });
-  //////////////////Konomi code ^^^^^///////////////////////////
+    //////////////////Konomi code ^^^^^///////////////////////////
+
+    function today() {
+        var day = $('#card1');
+        var temps = [];
+        var humidities = [];
+        var winds = [];
+        var pressures = [];
+        var low = 0;
+        var high = 0;
+        for (var i = 0; i < 8; i++) {
+            temps.push(response[i].main.temp);
+            humidities.push(response[i].main.humidity);
+            winds.push(response[i].wind.speed);
+            pressures.push(response[i].main.pressure);
+        }
+        low = parseInt(Math.min(...temps));
+        high = parseInt(Math.max(...temps));
+        var humidity =
+            day.append('<h2>' + low + '&#176;/' + high + '&#176;</h2>');
+        day.append('<img src=\"http://openweathermap.org/img/w/' + response[0].weather[0].icon + '.png\"</img>');
+        day.append('<p>' + response[0].weather[0].main + ' <span>' + response[0].weather[0].description + '</span></p>');
+        day.append('<p>Humidity ' + processAverages(humidities) + '</p>');
+        day.append('<p>Avg Wind Speed: ' + processAverages(winds) + '</p>');
+        // pressure
+        day.append('<p>Pressure: ' + processAverages(pressures) + '</p>');
+    }
 
 
 </script>

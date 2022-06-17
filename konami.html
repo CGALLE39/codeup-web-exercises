@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<<<<<<< HEAD
+<h1 class="welcome" id="welcome2">Konami Code</h1>
+<h2 class="doit" id="doit2">Do a code</h2>
+
+<div class="cute" id="cutie" display="none" style="text-align: center;">
+    <img src="img/peek_a_boo___by_fahmi4869_d75g3cu-fullview.png">
+</div>
+
+<!--<div class="funny" id="superfunny" style="text-align: center">-->
+<!--    <img src="img/i-have-your-home-adress-i-have-your-ip-address-meme.gif"/>-->
+<!--</div>-->
+
+=======
+<h1>Konami Code</h1>
+<h2>Do a code</h2>
+<div class="uwu"><img src="img/i-have-your-home-adress-i-have-your-ip-address-meme.gif" style="display: none;" alt="" /></div>
+>>>>>>> 0bf150ea4712b6ddfcacc34cc51e733989e25c30
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="js/jquery-3.x-git.js"></script>
+
+<script>
+    "use strict";
+
+    $(document).keyup(function(event){
+        console.log(event.keyCode);
+    });
+
+
+    function konami(fn) {
+        var input = "";
+        var cheatcode = "3838404037393739666513";
+        $(document).keydown(function(e) {
+            input += e.keyCode;
+            if (input.indexOf(cheatcode) !== -1) {
+                fn();
+                input = "";
+            }
+        });
+    }
+
+<<<<<<< HEAD
+    function lukaChan(fn) {
+        var input = "";
+        var cheatcode = "3838404037393739656613";
+        $(document).keydown(function(e) {
+            input += e.keyCode;
+            if (input.indexOf(cheatcode) !== -1) {
+                fn();
+                input = "";
+            }
+        });
+    }
+
+
+    // var audio1 = new Audio('audio/Hatsune Miku');
+    // audio1.play();
+
+=======
+>>>>>>> 0bf150ea4712b6ddfcacc34cc51e733989e25c30
+
+    $(document).ready(function() {
+        konami(function() {
+            alert("Party Time");
+<<<<<<< HEAD
+            $('body').append('<img src="img/i-have-your-home-adress-i-have-your-ip-address-meme.gif"/>');
+            $('#cutie').hide('<img src="img/peek_a_boo___by_fahmi4869_d75g3u-fullview.png"/>')
+        });
+    });
+
+    $("body").css("background", "hotpink");
+
+
+
+    $("#welcome2").css({"text-align": "center"});
+    $("#doit2").css({"text-align": "center"});
+
+    $('#cutie').css({})
+
+    $(document).ready(function() {
+        lukaChan(function() {
+            alert("Party Time");
+            $('body').append('<img src="img/lukaocto.gif"/>');
+            // audio.play();
+            $('#cutie').hide('<img src="img/peek_a_boo___by_fahmi4869_d75g3u-fullview.png"/>')
+
+        });
+    });
+
+    $(document).ready(function() {
+        konami(function() {
+            alert("Party Time");
+>>>>>>> 0bf150ea4712b6ddfcacc34cc51e733989e25c30
+        });
+    });
+</script>
+</body>
+</html>

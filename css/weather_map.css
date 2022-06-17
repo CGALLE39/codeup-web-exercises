@@ -11,55 +11,135 @@ body {
     -webkit-text-stroke-width: 4px;
     font-size: 50px;
     margin: auto;
-
 }
 
 btn {
     color: mediumpurple;
-
 }
-/*.top-nav {*/
-/*    background: var(--light-bg);*/
-/*    width: 100%;*/
-/*    !*z-index: 1000 px;*!*/
-/*    position: fixed;*/
-/*}*/
-/*.nav-item{*/
-/*    display: inline-block;*/
-/*    padding: 1.5em*/
-/*}*/
-/*.nav {*/
-/*    list-style-type: none;*/
-/*    padding: 0;*/
-/*    margin: 0;*/
 
-/*}*/
+.container{
+    padding: 20px 50px;
+    color:#fff;
+}
+
+.current-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.date-container{
+    font-weight: 100;
+}
+.date-container .time{
+    font-size: 20px;
+}
+
+.date-container #am-pm{
+    font-size: 20px;
+    margin-left: 20px;
+}
+
+.date-container .date{
+    font-size: 30px;
+}
 
 
-/*.navbarrr {*/
-/*    padding: 5px;*/
-/*    border-radius: 20px;*/
+.place-container .time-zone{
+    font-size: 30px;
+    font-weight: 100;
+}
 
-/*}*/
+.place-container .country{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.current-info .others{
+    display: flex;
+    flex-direction: column;
+    background: green;
+    padding:20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+}
+
+.current-info .others .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.future-forecast{
+    background: lightpink;
+    padding: 25px;
+    bottom: 0;
+    display: flex;
+    color:yellow;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.future-forecast .today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding:15px;
+    padding-right: 40px;
+    border-radius: 10px;
+    background: mediumpurple;
+}
+
+.future-forecast .today .day{
+    padding: 5px 15px;
+    background: pink;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.future-forecast .today .temp{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.future-forecast .weather-forecast{
+    display: flex;
+}
+
+.weather-forecast .weather-forecast-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    background: mediumpurple;
+}
+
+.weather-forecast .weather-forecast-item .day{
+    padding: 5px 15px;
+    background: pink;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forecast .weather-forecast-item .temp{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+
 
 .navberry {
     background-image: url(../img/sunset.jpeg);
 }
 
-.card {
-    padding: 10px;
-    text-align: center;
-    background-color: pink;
-    font-size: 8px;
-}
-
-.cardholder {
-    flex-wrap: wrap;
-}
-.form-control {
-    width: 40%;
-    /*border-radius: 10%;*/
-}
 
 
 /*
@@ -72,5 +152,8 @@ footer
     opacity: 60%;
     color: gray;
     position: absolute;
-    bottom: 0;
+    grid-area: footer;
+}
+#map {
+
 }
